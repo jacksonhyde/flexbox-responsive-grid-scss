@@ -11,42 +11,66 @@
     <div class="grid__row">
       <div class="col col--xs-12">
         <h2>Grid Layout</h2>
+        <p>This is an example of a mobile-first responsive grid system built using Flexbox and BEM class notation.<br/>To improve adoption rates, it is designed to follow the Bootstrap style DOM structure as closely as possible.<br/><br/>The grid is made up of three distinct elements:</p>
+        <ul>
+          <li><code>.grid</code> (the top level grid container)</li>
+          <li><code>.grid__row</code> (an element for each grid row)</li>
+          <li><code>.col</code> (the individual grid column elements)</li>
+        </ul>
+        <h3><code>.grid</code></h3>
+        <p>This element is the top level grid component. Similar to bootstrap, you should only use one of these per grid (eg. a <code>.grid</code> element should never be nested under another <code>.grid</code> element).
+        <h3><code>.grid__row</code></h3>
+        <p>This element is the container for all your grid columns. Combined with <code>.grid</code>, it uses the <a href="http://www.helloerik.com/the-subtle-magic-behind-why-the-bootstrap-3-grid-works">Boostrap negative margin trick</a> to frame the layout and provide grid gutters. It should only ever be a child of a <code>.grid</code> element or a <code>.col</code> element.</p>
+        <h3><code>.col</code></h3>
+        <p>This is the main column class - all your grid content should sit within a col. Each <code>.col</code> element also needs at least one other class to determine the width of the column. These can be combined to create different layouts at different responsive breakpoints:</p>
+        <ul>
+          <li><code>.col--xs-*</code></li>
+          <li><code>.col--sm-*</code></li>
+          <li><code>.col--md-*</code></li>
+          <li><code>.col--lg-*</code></li>
+          <li><code>.col--xlg-*</code></li>
+        </ul>
+
+        The <code>*</code> should be replaced by the number of columns you want the element to span. The grid is configured to use 12 columns by default.
+      </div>
+      <div class="col col--xs-12">
+        <h2>Column Examples</h2>
       </div>
       <div class="col col--xs-1">
-        <p>.col--xs-1</p>
+        <p class="col__label">.col--xs-1</p>
       </div>
       <div class="col col--xs-11">
-        <p>.col--xs-11</p>
+        <p class="col__label">.col--xs-11</p>
       </div>
       <div class="col col--xs-2">
-        <p>.col--xs-2</p>
+        <p class="col__label">.col--xs-2</p>
       </div>
       <div class="col col--xs-10">   
-        <p>.col--xs-10</p>
+        <p class="col__label">.col--xs-10</p>
       </div>
       <div class="col col--xs-3">
-        <p>.col--xs-3</p>
+        <p class="col__label">.col--xs-3</p>
       </div>
       <div class="col col--xs-9">   
-        <p>.col--xs-9</p>
+        <p class="col__label">.col--xs-9</p>
       </div>
       <div class="col col--xs-4">
-        <p>.col--xs-4</p>
+        <p class="col__label">.col--xs-4</p>
       </div>
       <div class="col col--xs-8">   
-        <p>.col--xs-8</p>
+        <p class="col__label">.col--xs-8</p>
       </div>
       <div class="col col--xs-5">
-        <p>.col--xs-5</p>
+        <p class="col__label">.col--xs-5</p>
       </div>
       <div class="col col--xs-7">   
-        <p>.col--xs-7</p>
+        <p class="col__label">.col--xs-7</p>
       </div>
       <div class="col col--xs-6">
-        <p>.col--xs-6</p>
+        <p class="col__label">.col--xs-6</p>
       </div>
       <div class="col col--xs-6">   
-        <p>.col--xs-6</p>
+        <p class="col__label">.col--xs-6</p>
       </div>
     </div>
   </div>
@@ -55,36 +79,45 @@
     <div class="grid__row">
       <div class="col col--xs-12">
         <h2>Responsive Layout</h2>
+        <p>The grid is configured to use the same media query breakpoints as Bootstrap:</p>
+        <ul>
+          <li><code>$xsmall</code> - 0px and up</li>
+          <li><code>$small</code> - 576px and up</li>
+          <li><code>$medium</code> - 768px and up</li>
+          <li><code>$large</code> - 992px and up</li>
+          <li><code>$x-large</code> - 1200px and up</li>
+        </ul>
+        <p>These are used with the <code>min-width</code> CSS property to provide a Mobile First approach to a responsive DOM.</p>
       </div>
       <div class="col col--xs-12 col--sm-4">
-        <p>.col--xs-12<br/>.col--sm-4</p>
+        <p class="col__label">.col--xs-12<br/>.col--sm-4</p>
       </div>
       <div class="col col--xs-12 col--sm-8">   
-        <p>.col--xs-12<br/>.col--sm-8</p>
+        <p class="col__label">.col--xs-12<br/>.col--sm-8</p>
       </div>
       <div class="col col--xs-12 col--sm-3">
-        <p>.col--xs-12<br/>.col--sm-3</p>
+        <p class="col__label">.col--xs-12<br/>.col--sm-3</p>
       </div>
       <div class="col col--xs-12 col--sm-9">   
-        <p>.col--xs-12<br/>.col--sm-9</p>
+        <p class="col__label">.col--xs-12<br/>.col--sm-9</p>
       </div>
       <div class="col col--xs-12 col--md-10">
-        <p>.col--xs-12<br/>.col--md-10</p>
+        <p class="col__label">.col--xs-12<br/>.col--md-10</p>
       </div>
       <div class="col col--xs-12 col--md-2">   
-        <p>.col--xs-12<br/>.col--md-2</p>
+        <p class="col__label">.col--xs-12<br/>.col--md-2</p>
       </div>
       <div class="col col--xs-6 col--xlg-3">
-        <p>.col--xs-6<br/>.col-xlg-3</p>
+        <p class="col__label">.col--xs-6<br/>.col-xlg-3</p>
       </div>
       <div class="col col--xs-6 col--xlg-3">   
-        <p>.col--xs-6<br/>.col-xlg-3</p>
+        <p class="col__label">.col--xs-6<br/>.col-xlg-3</p>
       </div>
       <div class="col col--xs-12 col--xlg-3">
-        <p>.col--xs-12<br/>.col--xlg-3</p>
+        <p class="col__label">.col--xs-12<br/>.col--xlg-3</p>
       </div>
       <div class="col col--xs-12 col--xlg-3">   
-        <p>.col--xs-12<br/>.col-xlg-3</p>
+        <p class="col__label">.col--xs-12<br/>.col-xlg-3</p>
       </div>
     </div>
   </div>
@@ -93,32 +126,33 @@
     <div class="grid__row">
       <div class="col col--xs-12">
         <h2>Nested Grid</h2>
+        <p>To create a nested grid, add a <code>.grid__row</code> element inside a <code>.col</code> element.</p>
       </div>
       <div class="col col--xs-6">
-        <p>.col--xs-6</p>
+        <p class="col__label">.col--xs-6</p>
         <div class="grid__row">
           <div class="col col--xs-12 col--md-4">
-            <p>.col--xs-12<br/>.col--md-4</p>
+            <p class="col__label">.col--xs-12<br/>.col--md-4</p>
           </div>
           <div class="col col--xs-12 col--md-4">
-            <p>.col--xs-12<br/>.col--md-4</p>
+            <p class="col__label">.col--xs-12<br/>.col--md-4</p>
           </div>
           <div class="col col--xs-12 col--md-4">
-            <p>.col--xs-12<br/>.col--md-4</p>
+            <p class="col__label">.col--xs-12<br/>.col--md-4</p>
           </div>
         </div>
       </div>
       <div class="col col--xs-6">
-        <p>.col--xs-6</p>
+        <p class="col__label">.col--xs-6</p>
         <div class="grid__row">
           <div class="col col--xs-4 col--md-12">
-            <p>.col--xs-4<br/>.col--md-12</p>
+            <p class="col__label">.col--xs-4<br/>.col--md-12</p>
           </div>
           <div class="col col--xs-4 col--md-12">
-            <p>.col--xs-4<br/>.col--md-12</p>
+            <p class="col__label">.col--xs-4<br/>.col--md-12</p>
           </div>
           <div class="col col--xs-4 col--md-12">
-            <p>.col--xs-4<br/>.col--md-12</p>
+            <p class="col__label">.col--xs-4<br/>.col--md-12</p>
           </div>
         </div>
       </div>
@@ -131,7 +165,7 @@
       font-family: 'Roboto', sans-serif;
     }
 
-    p {
+    .col__label {
       box-sizing: border-box;
       font-size: 10px;
       background-color: #eee;
@@ -141,6 +175,15 @@
       max-width: 100%;
       overflow: hidden;
       margin: 0;
+    }
+
+    li {
+      line-height: 2;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 5px;
     }
 
     img {
